@@ -1,0 +1,16 @@
+packages:
+  - 'packages/*'
+  - 'libs/db'
+  - 'libs/config'
+  - 'libs/read-market'
+  - 'libs/shared-types'
+  - 'apps/*'
+  - 'libs/notify'
+  - 'libs/notify-scouts'
+  - 'libs/logger'
+  - 'libs/ui'
+  - 'libs/eslint-config'
+  - 'libs/typescript-config'
+syncInjectedDepsAfterScripts:
+  - 'build'
+injectWorkspacePackages: true

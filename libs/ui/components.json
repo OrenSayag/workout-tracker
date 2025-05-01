@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@life-stats/ui/components",
+    "utils": "@life-stats/ui/lib/utils",
+    "hooks": "@life-stats/ui/hooks",
+    "lib": "@life-stats/ui/lib",
+    "ui": "@life-stats/ui/components"
+  }
+}

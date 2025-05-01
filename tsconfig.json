@@ -1,0 +1,34 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./libs/db"
+    },
+    {
+      "path": "./libs/config"
+    },
+    {
+      "path": "./libs/read-market"
+    },
+    {
+      "path": "./libs/shared-types"
+    },
+    {
+      "path": "./apps/read-market-runner"
+    },
+    {
+      "path": "./libs/notify"
+    },
+    {
+      "path": "./libs/notify-scouts"
+    },
+    {
+      "path": "./apps/notify-scouts-runner"
+    },
+    {
+      "path": "./libs/logger"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@life-stats/source",
+  "version": "0.2.0",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@nx/esbuild": "20.7.1",
+    "@nx/js": "20.7.1",
+    "@nx/next": "20.7.1",
+    "@nx/node": "20.7.1",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@types/node": "18.16.9",
+    "esbuild": "^0.19.2",
+    "nx": "20.7.1",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~5.7.2"
+  },
+  "dependencies": {
+    "next": "~15.2.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
