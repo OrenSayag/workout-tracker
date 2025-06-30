@@ -1,1 +1,1 @@
-Scouts for listings and notifies
+App for tracking workouts
