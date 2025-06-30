@@ -1,5 +1,5 @@
 {
-  "name": "@life-stats/eslint-config",
+  "name": "@workout-tracker/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "private": true,

@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@life-stats/ui/components",
-    "utils": "@life-stats/ui/lib/utils",
-    "hooks": "@life-stats/ui/hooks",
-    "lib": "@life-stats/ui/lib",
-    "ui": "@life-stats/ui/components"
+    "components": "@workout-tracker/ui/components",
+    "utils": "@workout-tracker/ui/lib/utils",
+    "hooks": "@workout-tracker/ui/hooks",
+    "lib": "@workout-tracker/ui/lib",
+    "ui": "@workout-tracker/ui/components"
   }
 }

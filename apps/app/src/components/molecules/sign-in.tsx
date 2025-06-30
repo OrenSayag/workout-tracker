@@ -1,5 +1,5 @@
 import { signIn } from '@/auth';
-import { Button } from '@life-stats/ui/components/button';
+import { Button } from '@workout-tracker/ui/components/button';
 
 export default function SignIn() {
   return (

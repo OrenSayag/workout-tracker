@@ -1,4 +1,4 @@
-import { cn } from '@life-stats/ui/lib/utils';
+import { cn } from '@workout-tracker/ui/lib/utils';
 import { FC } from 'react';
 
 interface Props {

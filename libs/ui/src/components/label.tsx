@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
 
-import { cn } from '@life-stats/ui/lib/utils';
+import { cn } from '@workout-tracker/ui/lib/utils';
 
 function Label({
   className,

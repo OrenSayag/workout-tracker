@@ -1,5 +1,5 @@
 {
-  "name": "@life-stats/logger",
+  "name": "@workout-tracker/logger",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
@@ -15,7 +15,7 @@
     }
   },
   "dependencies": {
-    "@life-stats/config": "workspace:^",
+    "@workout-tracker/config": "workspace:^",
     "pino": "^9.6.0",
     "tslib": "^2.3.0"
   }

@@ -1,10 +1,10 @@
 import pino from 'pino';
-import { config } from '@life-stats/config';
+import { config } from '@workout-tracker/config';
 
 import path from 'path';
 
 const destination = config.logger.dir
-  ? path.join(config.logger.dir, 'life-stats.log')
+  ? path.join(config.logger.dir, 'workout-tracker.log')
   : undefined;
 
 export const logger = pino({

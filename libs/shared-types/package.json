@@ -1,5 +1,5 @@
 {
-  "name": "@life-stats/shared-types",
+  "name": "@workout-tracker/shared-types",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",

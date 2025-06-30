@@ -1,18 +1,18 @@
-import '@life-stats/ui/globals.css';
+import '@workout-tracker/ui/globals.css';
 
 export const metadata = {
-  title: 'Life Stats',
-  description: 'Life Stats',
+    title: 'Workout Tracker',
+    description: 'Workout Tracker',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body>{children}</body>
+        </html>
+    );
 }

@@ -5,6 +5,7 @@ import {
   timestamp,
   uuid,
   varchar,
+  date,
 } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
@@ -60,3 +61,13 @@ export const accounts = pgTable(
     }),
   })
 );
+
+export const workouts = pgTable('workouts', {
+  id: uuid().primaryKey().defaultRandom(),
+  userId: varchar('user_id', { length: 255 })
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  workoutDate: date('workout_date').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').$onUpdate(() => new Date()),
+});

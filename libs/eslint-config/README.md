@@ -1,3 +1,3 @@
-# `@life-stats/eslint-config`
+# `@workout-tracker/eslint-config`
 
 Shared eslint configuration for the workspace.

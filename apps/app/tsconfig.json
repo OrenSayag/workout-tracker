@@ -1,10 +1,10 @@
 {
-  "extends": "@life-stats/typescript-config/nextjs.json",
+  "extends": "@workout-tracker/typescript-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@life-stats/ui/*": ["../../libs/ui/src/*"]
+      "@workout-tracker/ui/*": ["../../libs/ui/src/*"]
     },
     "plugins": [
       {

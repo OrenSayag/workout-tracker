@@ -13,8 +13,8 @@ import {
   type FieldValues,
 } from 'react-hook-form';
 
-import { cn } from '@life-stats/ui/lib/utils';
-import { Label } from '@life-stats/ui/components/label';
+import { cn } from '@workout-tracker/ui/lib/utils';
+import { Label } from '@workout-tracker/ui/components/label';
 
 const Form = FormProvider;
 

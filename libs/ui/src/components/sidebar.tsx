@@ -5,25 +5,25 @@ import { Slot } from '@radix-ui/react-slot';
 import { VariantProps, cva } from 'class-variance-authority';
 import { PanelLeftIcon } from 'lucide-react';
 
-import { useIsMobile } from '@life-stats/ui/hooks/use-mobile';
-import { cn } from '@life-stats/ui/lib/utils';
-import { Button } from '@life-stats/ui/components/button';
-import { Input } from '@life-stats/ui/components/input';
-import { Separator } from '@life-stats/ui/components/separator';
+import { useIsMobile } from '@workout-tracker/ui/hooks/use-mobile';
+import { cn } from '@workout-tracker/ui/lib/utils';
+import { Button } from '@workout-tracker/ui/components/button';
+import { Input } from '@workout-tracker/ui/components/input';
+import { Separator } from '@workout-tracker/ui/components/separator';
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from '@life-stats/ui/components/sheet';
-import { Skeleton } from '@life-stats/ui/components/skeleton';
+} from '@workout-tracker/ui/components/sheet';
+import { Skeleton } from '@workout-tracker/ui/components/skeleton';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@life-stats/ui/components/tooltip';
+} from '@workout-tracker/ui/components/tooltip';
 
 const SIDEBAR_COOKIE_NAME = 'sidebar_state';
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

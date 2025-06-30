@@ -1,7 +1,7 @@
 import NextAuth, { NextAuthResult } from 'next-auth';
 import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import Google from 'next-auth/providers/google';
-import { db, users, accounts, sessions } from '@life-stats/db';
+import { db, users, accounts, sessions } from '@workout-tracker/db';
 
 const result = NextAuth({
   providers: [Google],

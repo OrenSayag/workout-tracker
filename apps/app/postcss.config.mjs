@@ -1,1 +1,1 @@
-export { default } from '@life-stats/ui/postcss.config';
+export { default } from '@workout-tracker/ui/postcss.config';

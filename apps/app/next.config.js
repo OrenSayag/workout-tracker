@@ -12,7 +12,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-  // transpilePackages: ['@life-stats/ui'],
+  // transpilePackages: ['@workout-tracker/ui'],
   output: 'standalone',
   // // Solution for pino worker thread error when using nextjs.
   // webpack(config) {

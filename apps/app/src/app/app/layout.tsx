@@ -1,13 +1,13 @@
 import { auth } from '@/auth';
 import { AppSidebar } from '@/src/components/app-sidebar';
 import ReactQueryProvider from '@/src/components/providers/react-query-provider';
-import { isBetaUser } from '@life-stats/db';
-import { SidebarProvider } from '@life-stats/ui/components/sidebar';
-import { Toaster } from '@life-stats/ui/components/sonner';
+import { isBetaUser } from '@workout-tracker/db';
+import { SidebarProvider } from '@workout-tracker/ui/components/sidebar';
+import { Toaster } from '@workout-tracker/ui/components/sonner';
 import {
   ModeToggle,
   ThemeProvider,
-} from '@life-stats/ui/providers/theme-provider';
+} from '@workout-tracker/ui/providers/theme-provider';
 import { redirect } from 'next/navigation';
 import { FC } from 'react';
 

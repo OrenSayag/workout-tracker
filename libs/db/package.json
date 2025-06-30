@@ -1,5 +1,5 @@
 {
-  "name": "@life-stats/db",
+  "name": "@workout-tracker/db",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
@@ -15,8 +15,8 @@
     }
   },
   "dependencies": {
-    "@life-stats/config": "workspace:^",
-    "@life-stats/logger": "workspace:^",
+    "@workout-tracker/config": "workspace:^",
+    "@workout-tracker/logger": "workspace:^",
     "drizzle-orm": "^0.41.0",
     "lodash": "^4.17.21",
     "pg": "^8.14.1",

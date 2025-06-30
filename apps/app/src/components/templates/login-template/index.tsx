@@ -4,7 +4,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from '@life-stats/ui/components/card';
+} from '@workout-tracker/ui/components/card';
 import {
   SocialProvider,
   SocialProviderLoginButton,

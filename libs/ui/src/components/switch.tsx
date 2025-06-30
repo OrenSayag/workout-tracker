@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
 
-import { cn } from '@life-stats/ui/lib/utils';
+import { cn } from '@workout-tracker/ui/lib/utils';
 
 function Switch({
   className,

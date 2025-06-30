@@ -1,8 +1,8 @@
 import { ComponentPropsWithoutRef, FC } from 'react';
 import GoogleIcon from '../../../assets/icons/social/google.svg';
 import Image from 'next/image';
-import { Button } from '@life-stats/ui/components/button';
-import { cn } from '@life-stats/ui/lib/utils';
+import { Button } from '@workout-tracker/ui/components/button';
+import { cn } from '@workout-tracker/ui/lib/utils';
 
 export enum SocialProvider {
   GOOGLE = 'google',

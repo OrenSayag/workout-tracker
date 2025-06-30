@@ -1,20 +1,20 @@
 services:
-  db:
-    image: postgres:14-alpine
-    environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=life_stats
-    ports:
-      - '5432:5432'
-    volumes:
-      - life_stats_db:/var/lib/postgresql/data
+    db:
+        image: postgres:14-alpine
+        environment:
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_DB=workout_tracker
+        ports:
+            - '5432:5432'
+        volumes:
+            - workout_tracker_db:/var/lib/postgresql/data
 
-  dbgate:
-    build: docker
-    image: dbgate/dbgate:alpine
-    ports:
-      - 3100:3000
+    dbgate:
+        build: docker
+        image: dbgate/dbgate:alpine
+        ports:
+            - 3100:3000
 
 volumes:
-  life_stats_db:
+    workout_tracker_db:

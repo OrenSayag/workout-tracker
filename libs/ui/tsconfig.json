@@ -1,9 +1,9 @@
 {
-  "extends": "@life-stats/typescript-config/react-library.json",
+  "extends": "@workout-tracker/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@life-stats/ui/*": ["./src/*"]
+      "@workout-tracker/ui/*": ["./src/*"]
     }
   },
   "include": ["."],

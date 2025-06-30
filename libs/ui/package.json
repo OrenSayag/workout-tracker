@@ -1,5 +1,5 @@
 {
-  "name": "@life-stats/ui",
+  "name": "@workout-tracker/ui",
   "version": "0.0.1",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -28,8 +28,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@life-stats/eslint-config": "workspace:*",
-    "@life-stats/typescript-config": "workspace:*",
+    "@workout-tracker/eslint-config": "workspace:*",
+    "@workout-tracker/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.0.8",
     "@types/node": "^20",
     "@types/react": "^19",

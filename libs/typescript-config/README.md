@@ -1,3 +1,3 @@
-# `@life-stats/typescript-config`
+# `@workout-tracker/typescript-config`
 
 Shared typescript configuration for the workspace.
