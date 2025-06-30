@@ -22,6 +22,7 @@ const items = [
         title: 'Home',
         url: '/app',
         icon: Home,
+        disabled: false,
     },
 ];
 

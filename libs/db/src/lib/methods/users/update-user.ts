@@ -1,23 +1,22 @@
 import { eq } from 'drizzle-orm';
 import { db } from '../../../config';
 import { users } from '../../schema';
-import { ContactInfo, User } from '../../types';
+import { User } from '../../types';
 
 type Input = {
-  id: string;
-  name?: string;
-  contactInfo?: ContactInfo;
+    id: string;
+    name?: string;
 };
 
 type Output = {
-  user: User;
+    user: User;
 };
 
 export const updateUser = async (input: Input): Promise<Output> => {
-  const { id, ...updateData } = input;
-  await db.update(users).set(updateData).where(eq(users.id, id));
+    const { id, ...updateData } = input;
+    await db.update(users).set(updateData).where(eq(users.id, id));
 
-  const updated = await db.select().from(users).where(eq(users.id, id));
+    const updated = await db.select().from(users).where(eq(users.id, id));
 
-  return { user: updated[0] };
+    return { user: updated[0] };
 };
