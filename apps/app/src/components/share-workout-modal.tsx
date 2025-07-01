@@ -8,7 +8,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from '@workout-tracker/ui/components/dialog';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useUsersWithPhones } from '../hooks/use-users';
 import { useCurrentUserMonthlyStats } from '../hooks/use-workouts';
 import { Button } from '@workout-tracker/ui/components/button';
@@ -21,6 +21,7 @@ import {
 } from '@workout-tracker/ui/components/select';
 import { Label } from '@workout-tracker/ui/components/label';
 import { toast } from 'sonner';
+import { useIsMobile } from '@workout-tracker/ui/hooks/use-mobile';
 
 interface ShareWorkoutModalProps {
     trigger: React.ReactNode;
@@ -42,6 +43,7 @@ const workoutMessages: string[] = [
 export function ShareWorkoutModal({ trigger }: ShareWorkoutModalProps) {
     const [selectedUserId, setSelectedUserId] = useState<string>('');
     const [isOpen, setIsOpen] = useState(false);
+    const isMobile = useIsMobile();
     const { data: usersData, isLoading, isError } = useUsersWithPhones();
     const {
         data: userStats,
@@ -73,9 +75,12 @@ export function ShareWorkoutModal({ trigger }: ShareWorkoutModalProps) {
                 }`.replaceAll('\t', ''),
             ].join('\n')
         );
-        const whatsappUrl = `https://web.whatsapp.com/send?phone=${formattedNumber}&text=${message}`;
+        const baseUrl = isMobile
+            ? 'whatsapp://send'
+            : 'https://web.whatsapp.com/send';
+        const whatsappUrl = `${baseUrl}?phone=${formattedNumber}&text=${message}`;
         return whatsappUrl;
-    }, [selectedUserId]);
+    }, [selectedUserId, isMobile]);
 
     const handleShare = () => {
         if (!whatsAppShareUrl) {
