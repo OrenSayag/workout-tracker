@@ -1,5 +1,5 @@
 {
-  "name": "@workout-tracker/db",
+  "name": "@workout-tracker/time",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
@@ -15,20 +15,10 @@
     }
   },
   "dependencies": {
-    "@workout-tracker/config": "workspace:^",
-    "@workout-tracker/logger": "workspace:^",
-    "@workout-tracker/time": "workspace:^",
-    "drizzle-orm": "^0.41.0",
-    "lodash": "^4.17.21",
     "luxon": "^3.6.1",
-    "pg": "^8.14.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.16",
-    "@types/luxon": "^3.6.2",
-    "@types/pg": "^8.11.11",
-    "drizzle-kit": "^0.30.6",
-    "tsx": "^4.19.3"
+    "@types/luxon": "^3.6.2"
   }
 }

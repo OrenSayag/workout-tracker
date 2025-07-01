@@ -9,15 +9,5 @@
     "types": ["node"]
   },
   "include": ["src/**/*.ts"],
-  "references": [
-    {
-      "path": "../time/tsconfig.lib.json"
-    },
-    {
-      "path": "../logger/tsconfig.lib.json"
-    },
-    {
-      "path": "../config/tsconfig.lib.json"
-    }
-  ]
+  "references": []
 }

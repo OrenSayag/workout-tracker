@@ -1,28 +1,30 @@
-import { eq, and } from 'drizzle-orm';
+import { and, eq } from 'drizzle-orm';
 import { db } from '../../../config';
 import { workouts } from '../../schema';
+import { getCurrentDate } from '@workout-tracker/time';
 
 type Input = {
-  userId: string;
-  workoutDate: Date;
+    userId: string;
+    workoutDate: Date;
 };
 
 type Output = {
-  completed: boolean;
+    completed: boolean;
 };
 
 export const checkTodaysWorkout = async (input: Input): Promise<Output> => {
-  const existingWorkout = await db
-    .select()
-    .from(workouts)
-    .where(
-      and(
-        eq(workouts.userId, input.userId),
-        eq(workouts.workoutDate, input.workoutDate.toISOString().split('T')[0])
-      )
-    );
+    const currentDate = getCurrentDate();
+    const existingWorkout = await db
+        .select()
+        .from(workouts)
+        .where(
+            and(
+                eq(workouts.userId, input.userId),
+                eq(workouts.workoutDate, currentDate)
+            )
+        );
 
-  return {
-    completed: existingWorkout.length > 0,
-  };
+    return {
+        completed: existingWorkout.length > 0,
+    };
 };

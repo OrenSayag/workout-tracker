@@ -5,11 +5,12 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^1.9.0",
     "@hookform/resolvers": "^5.0.1",
+    "@tanstack/react-query": "^5.74.4",
     "@workout-tracker/db": "workspace:^",
     "@workout-tracker/logger": "workspace:^",
     "@workout-tracker/shared-types": "workspace:^",
+    "@workout-tracker/time": "workspace:^",
     "@workout-tracker/ui": "workspace:*",
-    "@tanstack/react-query": "^5.74.4",
     "lucide-react": "^0.475.0",
     "next": "^15.2.3",
     "next-auth": "5.0.0-beta.26",
@@ -21,11 +22,11 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@workout-tracker/eslint-config": "workspace:*",
-    "@workout-tracker/typescript-config": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@workout-tracker/eslint-config": "workspace:*",
+    "@workout-tracker/typescript-config": "workspace:*",
     "typescript": "^5.7.3"
   }
 }

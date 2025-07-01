@@ -5,6 +5,7 @@ import { users, workouts } from '../../schema';
 type Input = {
   year: number;
   month: number;
+  currentUserId?: string;
 };
 
 type Output = {
@@ -12,6 +13,7 @@ type Output = {
     userId: string;
     userName: string;
     count: number;
+    isCurrentUser: boolean;
   }>;
 };
 
@@ -32,5 +34,10 @@ export const getMonthlyStats = async (input: Input): Promise<Output> => {
     )
     .groupBy(workouts.userId, users.name);
 
-  return { stats };
+  const statsWithCurrentUser = stats.map((stat) => ({
+    ...stat,
+    isCurrentUser: stat.userId === input.currentUserId,
+  }));
+
+  return { stats: statsWithCurrentUser };
 };

@@ -19,6 +19,7 @@ export const users = pgTable('users', {
     mode: 'date',
   }),
   image: varchar('image', { length: 255 }),
+  phone: varchar('phone', { length: 20 }),
 });
 
 export const betaUsers = pgTable('beta_users', {

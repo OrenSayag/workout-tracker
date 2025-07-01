@@ -23,6 +23,9 @@
   "exclude": ["node_modules"],
   "references": [
     {
+      "path": "../../libs/time"
+    },
+    {
       "path": "../../libs/shared-types"
     },
     {

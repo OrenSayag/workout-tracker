@@ -47,9 +47,23 @@ export function WorkoutStatsTable() {
           {data?.stats
             .sort((a, b) => b.count - a.count)
             .map((stat) => (
-              <TableRow key={stat.userId}>
-                <TableCell>{stat.userName}</TableCell>
-                <TableCell>{stat.count}</TableCell>
+              <TableRow
+                key={stat.userId}
+                className={
+                  stat.isCurrentUser ? 'bg-blue-50 dark:bg-blue-950/20' : ''
+                }
+              >
+                <TableCell
+                  className={stat.isCurrentUser ? 'font-semibold' : ''}
+                >
+                  {stat.userName}
+                  {stat.isCurrentUser && ' (You)'}
+                </TableCell>
+                <TableCell
+                  className={stat.isCurrentUser ? 'font-semibold' : ''}
+                >
+                  {stat.count}
+                </TableCell>
               </TableRow>
             ))}
           {data?.stats.length === 0 && (
