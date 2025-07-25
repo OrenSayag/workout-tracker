@@ -1,1 +1,1 @@
-export * from './lib/achievements.js';
+export * from './lib/achievements';
