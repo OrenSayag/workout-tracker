@@ -15,6 +15,7 @@
     }
   },
   "dependencies": {
+    "@workout-tracker/achievements": "workspace:^",
     "@workout-tracker/config": "workspace:^",
     "@workout-tracker/logger": "workspace:^",
     "@workout-tracker/time": "workspace:^",

@@ -13,6 +13,9 @@
       "path": "../config"
     },
     {
+      "path": "../achievements"
+    },
+    {
       "path": "./tsconfig.lib.json"
     }
   ]

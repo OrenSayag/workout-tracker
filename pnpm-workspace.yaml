@@ -12,6 +12,7 @@ packages:
   - 'libs/eslint-config'
   - 'libs/typescript-config'
   - 'libs/time'
+  - 'libs/achievements'
 syncInjectedDepsAfterScripts:
   - 'build'
 injectWorkspacePackages: true
