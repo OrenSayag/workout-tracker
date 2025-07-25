@@ -32,7 +32,7 @@ export const achievements = [
     name: 'Weekend Warrior',
     description: 'Complete a workout in the weekend.',
     icon: '🏅',
-    points: 50,
+    points: 15,
   }
 ] as const;
 
