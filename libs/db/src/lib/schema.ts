@@ -86,4 +86,7 @@ export const user_achievements = pgTable('user_achievements', {
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').$onUpdate(() => new Date()),
     achievementId: achievementId('achievement_id').notNull(),
+    userId: varchar('user_id', { length: 255 })
+        .notNull()
+        .references(() => users.id, { onDelete: 'cascade' }),
 });
