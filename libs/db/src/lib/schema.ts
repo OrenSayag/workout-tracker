@@ -68,6 +68,8 @@ export const accounts = pgTable(
 export const achievementId = pgEnum('achievement_id', [
     AchievementId.FirstWorkout,
     AchievementId.WeeklyStreak,
+    AchievementId.MonthlyStreak,
+    AchievementId.WeekendWarrior,
 ]);
 
 export const workouts = pgTable('workouts', {
