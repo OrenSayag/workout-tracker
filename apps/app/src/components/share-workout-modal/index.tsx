@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@workout-tracker/ui/components/button';
 import {
     Dialog,
     DialogContent,
@@ -8,10 +9,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from '@workout-tracker/ui/components/dialog';
-import { useEffect, useMemo, useState } from 'react';
-import { useUsersWithPhones } from '../hooks/use-users';
-import { useCurrentUserMonthlyStats } from '../hooks/use-workouts';
-import { Button } from '@workout-tracker/ui/components/button';
+import { Label } from '@workout-tracker/ui/components/label';
 import {
     Select,
     SelectContent,
@@ -19,26 +17,16 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@workout-tracker/ui/components/select';
-import { Label } from '@workout-tracker/ui/components/label';
-import { toast } from 'sonner';
 import { useIsMobile } from '@workout-tracker/ui/hooks/use-mobile';
+import { useMemo, useState } from 'react';
+import { toast } from 'sonner';
+import { useUsersWithPhones } from '../../hooks/use-users';
+import { useCurrentUserMonthlyStats } from '../../hooks/use-workouts';
+import { workoutMessages } from './messages';
 
 interface ShareWorkoutModalProps {
     trigger: React.ReactNode;
 }
-
-const workoutMessages: string[] = [
-    '🎉 סיימתי את האימון שלי היום! 💪\nתזכור/י – כל צעד קטן הוא חלק מההתקדמות! 🏃‍♂️',
-    '💥 עוד אימון מאחוריי!\nהגוף כואב, אבל הראש בעננים! ☁️💪',
-    '🔥 נמסתי מזיעה אבל זה שווה את זה!\nיום נוסף, גרסה חזקה יותר של עצמי! 🏋️‍♀️',
-    '✅ אימון בוצע בהצלחה!\nהכוח האמיתי הוא בהתמדה 💯',
-    '💪 הלב דופק, השרירים צורחים – וזה בדיוק מה שאני צריך/ה!\nיאללה גם אתה/את, תזוז/י קצת! 🏃‍♀️',
-    '👟 סיימתי את הקרב של היום!\nמחר זה אני מול אני של אתמול!',
-    '🥵 הגוף אומר "די", אבל הראש אומר "עוד אחד"!\nסיימתי. תורך! 🔁',
-    '💣 האימון נגמר ואני עדיין חי/ה!\nחזק/ה יותר ממה שחשבתי! 💥',
-    '💦 כל טיפה של זיעה – צעד נוסף להצלחה!\nעשיתי את זה היום! 🙌',
-    '😤 השרירים בוכים אבל אני מחייך/ת!\nמוכן/ה ליום חדש מלא אנרגיה ⚡',
-];
 
 export function ShareWorkoutModal({ trigger }: ShareWorkoutModalProps) {
     const [selectedUserId, setSelectedUserId] = useState<string>('');
