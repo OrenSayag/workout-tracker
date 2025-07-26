@@ -12,18 +12,24 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@workout-tracker/ui/components/sidebar';
-import { Home } from 'lucide-react';
+import { Home, IceCreamBowl, Medal } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const items = [
-    {
-        title: 'Home',
-        url: '/app',
-        icon: Home,
-        disabled: false,
-    },
+  {
+    title: 'Home',
+    url: '/app',
+    icon: Home,
+    disabled: false,
+  },
+  {
+    title: 'Achievements',
+    url: '/app/achievements',
+    icon: Medal,
+    disabled: false,
+  },
 ];
 
 export function AppSidebar() {
