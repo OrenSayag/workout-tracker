@@ -70,6 +70,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.74.4
         version: 5.74.4(react@19.1.0)
+      '@workout-tracker/achievements':
+        specifier: workspace:*
+        version: link:../../libs/achievements
       '@workout-tracker/db':
         specifier: workspace:^
         version: link:../../libs/db
