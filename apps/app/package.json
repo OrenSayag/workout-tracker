@@ -6,6 +6,7 @@
     "@auth/drizzle-adapter": "^1.9.0",
     "@hookform/resolvers": "^5.0.1",
     "@tanstack/react-query": "^5.74.4",
+    "@workout-tracker/achievements": "workspace:*",
     "@workout-tracker/db": "workspace:^",
     "@workout-tracker/logger": "workspace:^",
     "@workout-tracker/shared-types": "workspace:^",
