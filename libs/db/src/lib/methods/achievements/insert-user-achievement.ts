@@ -20,7 +20,6 @@ export const insertUserAchievement = async (input: Input): Promise<Output> => {
 
 
     });
-    console.log("success?!")
 
     return {
       success: true,
