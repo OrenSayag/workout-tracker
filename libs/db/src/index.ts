@@ -13,5 +13,9 @@ export * from './lib/methods/workouts/get-monthly-stats';
 export * from './lib/methods/workouts/get-user-monthly-stats';
 export * from './lib/methods/workouts/check-todays-workout';
 
+export * from './lib/methods/achievements/get-user-achievement';
+export * from './lib/methods/achievements/delete-user-achievement';
+export * from './lib/methods/achievements/insert-user-achievement';
+
 export { db } from './config';
 export { users, sessions, accounts } from './lib/schema';
