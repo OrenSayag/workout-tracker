@@ -8,7 +8,6 @@ export const AchievementsTemplate = () => {
     <div className="container mx-auto p-6 space-y-6">
       <H1>Achievements</H1>
       <p className="text-muted-foreground">Possible Achievements</p>
-      <hr/>
       <AchievementsList />
     </div>
   );

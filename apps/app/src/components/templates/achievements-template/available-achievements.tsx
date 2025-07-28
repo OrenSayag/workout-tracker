@@ -1,6 +1,5 @@
 import { achievements, Achievement } from '@workout-tracker/achievements';
 
-// Item Component
 type ItemProps = {
   achievement: Achievement;
 };
@@ -18,7 +17,6 @@ const Item = ({ achievement }: ItemProps) => {
   );
 };
 
-// List Component
 export const AchievementsList = () => {
   return (
     <div className="flex flex-wrap gap-6">
