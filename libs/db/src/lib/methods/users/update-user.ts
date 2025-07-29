@@ -6,6 +6,7 @@ import { User } from '../../types';
 type Input = {
     id: string;
     name?: string;
+    phone?: string;
 };
 
 type Output = {
