@@ -1,4 +1,4 @@
-import { and, eq } from 'drizzle-orm';
+import { and, eq, count } from 'drizzle-orm';
 import { db } from '../../../config';
 import { workouts } from '../../schema';
 
@@ -11,12 +11,11 @@ type Output = {
 };
 
 export const getUserWorkoutCount = async (input: Input): Promise<Output> => {
-  const existingWorkouts = await db
-    .select()
+  const existingWorkoutsCount = await db
+    .select({count: count()})
     .from(workouts)
     .where(and(eq(workouts.userId, input.userId)));
-
   return {
-    workoutCount: existingWorkouts.length,
+    workoutCount: existingWorkoutsCount[0].count,
   };
 };
