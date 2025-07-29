@@ -17,18 +17,18 @@ type Output = {
 };
 
 async function handleAchievements(input: Input) {
+  async function firstWorkout() {
   const userWorkoutCount = await getUserWorkoutCount(input);
-  function firstWorkout() {
     if (userWorkoutCount.workoutCount === 0) {
       const achievementData = {
         userId: input.userId,
         achievementId: AchievementId.FirstWorkout,
       };
-      insertUserAchievement(achievementData);
+      await insertUserAchievement(achievementData);
     }
   }
 
-  firstWorkout();
+  await firstWorkout();
 }
 
 export const markWorkout = async (input: Input): Promise<Output> => {

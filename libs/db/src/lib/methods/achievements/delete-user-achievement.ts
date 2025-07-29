@@ -1,6 +1,6 @@
 import { AchievementId } from '@workout-tracker/achievements';
 import { db } from '../../../config';
-import { user_achievements } from '../../schema';
+import { userAchievements } from '../../schema';
 import { and, eq } from 'drizzle-orm';
 
 type Input = {
@@ -8,21 +8,13 @@ type Input = {
   achievementId: AchievementId;
 };
 
-type Output = {
-  isDeleted: boolean;
-};
-
-export const deleteUserAchievement = async (input: Input): Promise<Output> => {
+export const deleteUserAchievement = async (input: Input) => {
   await db
-    .delete(user_achievements)
+    .delete(userAchievements)
     .where(
       and(
-        eq(user_achievements.userId, input.userId),
-        eq(user_achievements.achievementId, input.achievementId)
+        eq(userAchievements.userId, input.userId),
+        eq(userAchievements.achievementId, input.achievementId)
       )
     );
-
-  return {
-    isDeleted: true,
-  };
 };

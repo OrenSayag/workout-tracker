@@ -1,5 +1,5 @@
 import { db } from '../../../config';
-import { user_achievements } from '../../schema';
+import { userAchievements } from '../../schema';
 import { AchievementId } from '@workout-tracker/achievements';
 
 type Input = {
@@ -7,28 +7,9 @@ type Input = {
   achievementId: AchievementId;
 };
 
-type Output = {
-  success: boolean;
-  message: string;
-};
-
-export const insertUserAchievement = async (input: Input): Promise<Output> => {
-  try {
-    await db.insert(user_achievements).values({
-      userId: input.userId,
-      achievementId: input.achievementId,
-
-
-    });
-
-    return {
-      success: true,
-      message: 'Achievement inserted successfully.',
-    };
-  } catch (error) {
-    return {
-      success: false,
-      message: 'Failed to insert achievement',
-    };
-  }
+export const insertUserAchievement = async (input: Input): Promise<void> => {
+  await db.insert(userAchievements).values({
+    userId: input.userId,
+    achievementId: input.achievementId,
+  });
 };

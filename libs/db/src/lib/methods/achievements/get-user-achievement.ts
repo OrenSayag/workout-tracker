@@ -1,5 +1,5 @@
 import { db } from '../../../config';
-import { user_achievements } from '../../schema';
+import { userAchievements } from '../../schema';
 import { AchievementId } from '@workout-tracker/achievements';
 import { UserAchievement } from '../../types';
 import { and, eq } from 'drizzle-orm';
@@ -16,11 +16,11 @@ type Output = {
 export const getUserAchievement = async (input: Input): Promise<Output> => {
   const userAchievement = await db
     .select()
-    .from(user_achievements)
+    .from(userAchievements)
     .where(
       and(
-        eq(user_achievements.userId, input.userId),
-        eq(user_achievements.achievementId, input.achievementId)
+        eq(userAchievements.userId, input.userId),
+        eq(userAchievements.achievementId, input.achievementId)
       )
     );
   return {
