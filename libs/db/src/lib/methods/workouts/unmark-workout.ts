@@ -10,22 +10,6 @@ type Input = {
     workoutDate: string;
 };
 
-async function handleAchievements(input: Input) {
-    async function deleteFirstWorkout() {
-        const userWorkoutCount = await getUserWorkoutCount(input);
-        if (userWorkoutCount.workoutCount === 0) {
-            const achievementData = {
-                userId: input.userId,
-                achievementId: AchievementId.FirstWorkout,
-            };
-
-            await deleteUserAchievement(achievementData);
-        }
-    }
-
-    await deleteFirstWorkout();
-}
-
 export const unmarkWorkout = async (input: Input) => {
     await db
         .delete(workouts)
@@ -36,4 +20,19 @@ export const unmarkWorkout = async (input: Input) => {
             )
         );
     await handleAchievements(input);
+    async function handleAchievements(input: Input) {
+        async function deleteFirstWorkout() {
+            const userWorkoutCount = await getUserWorkoutCount(input);
+            if (userWorkoutCount.workoutCount === 0) {
+                const achievementData = {
+                    userId: input.userId,
+                    achievementId: AchievementId.FirstWorkout,
+                };
+
+                await deleteUserAchievement(achievementData);
+            }
+        }
+
+        await deleteFirstWorkout();
+    }
 };
