@@ -20,8 +20,8 @@ import {
 import { useIsMobile } from '@workout-tracker/ui/hooks/use-mobile';
 import { useMemo, useState } from 'react';
 import { toast } from 'sonner';
-import { useUsersWithPhones } from '../../hooks/use-users';
-import { useCurrentUserMonthlyStats } from '../../hooks/use-workouts';
+import { useUsersWithPhones } from '../../../hooks/use-users';
+import { useCurrentUserMonthlyStats } from '../../../hooks/use-workouts';
 import { workoutMessages } from './messages';
 
 interface ShareWorkoutModalProps {

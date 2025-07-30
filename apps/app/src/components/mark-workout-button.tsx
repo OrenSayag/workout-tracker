@@ -6,7 +6,7 @@ import {
     useUnmarkWorkout,
 } from '../hooks/use-workouts';
 import { Button } from '@workout-tracker/ui/components/button';
-import { ShareWorkoutModal } from './share-workout-modal';
+import { ShareWorkoutModal } from './organisms/share-workout-modal';
 import { useState } from 'react';
 
 export function MarkWorkoutButton() {
