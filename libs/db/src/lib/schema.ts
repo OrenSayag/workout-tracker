@@ -82,7 +82,7 @@ export const workouts = pgTable('workouts', {
     updatedAt: timestamp('updated_at').$onUpdate(() => new Date()),
 });
 
-export const user_achievements = pgTable('user_achievements', {
+export const userAchievements = pgTable('user_achievements', {
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').$onUpdate(() => new Date()),
     achievementId: achievementId('achievement_id').notNull(),
