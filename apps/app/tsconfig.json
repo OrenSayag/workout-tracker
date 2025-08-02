@@ -32,6 +32,9 @@
       "path": "../../libs/logger"
     },
     {
+      "path": "../../libs/achievements"
+    },
+    {
       "path": "../../libs/db"
     }
   ]

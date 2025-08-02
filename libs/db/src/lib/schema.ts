@@ -1,13 +1,14 @@
 import { AchievementId } from '@workout-tracker/achievements';
 import {
-    date,
-    integer,
-    pgEnum,
-    pgTable,
-    primaryKey,
-    timestamp,
-    uuid,
-    varchar,
+  boolean,
+  date,
+  integer,
+  pgEnum,
+  pgTable,
+  primaryKey,
+  timestamp,
+  uuid,
+  varchar
 } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
@@ -89,4 +90,5 @@ export const userAchievements = pgTable('user_achievements', {
     userId: varchar('user_id', { length: 255 })
         .notNull()
         .references(() => users.id, { onDelete: 'cascade' }),
+  isRead: boolean('is_read').default(false),
 });
