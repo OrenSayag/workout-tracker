@@ -16,6 +16,8 @@ export * from './lib/methods/workouts/check-todays-workout';
 export * from './lib/methods/achievements/get-user-achievement';
 export * from './lib/methods/achievements/delete-user-achievement';
 export * from './lib/methods/achievements/insert-user-achievement';
+export * from './lib/methods/achievements/get-user-unread-achievements';
+export * from './lib/methods/achievements/mark-achievement-read';
 
 export { db } from './config';
 export { users, sessions, accounts } from './lib/schema';
