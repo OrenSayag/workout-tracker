@@ -37,3 +37,18 @@ nx drizzle-migrate db
 ```bash
 nx dev app
 ```
+
+---
+### Updating the Database Schema
+To update the database schema, follow these steps:
+1. Open the schema definition file: `libs/db/src/lib/schema.ts`
+2. Modify the table definitions as needed.
+3. Generate the migration files by running: 
+    ```bash
+   nx drizzle-generate db
+   ```
+4. Confirm that the migration files have been created in:`libs/db/drizzle/meta`
+5. Apply the migrations to your database:
+    ```bash
+    nx drizzle-generate db
+   ```
