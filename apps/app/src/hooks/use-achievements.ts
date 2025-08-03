@@ -11,11 +11,11 @@ export function useGetUnreadAchievements() {
   });
 }
 
-export function useMarkAchievementReadAction() {
+export function useMarkAchievementRead(userAchievementIdToMark: string) {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: markAchievementReadAction,
+    mutationFn: () =>markAchievementReadAction(userAchievementIdToMark),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['unread-achievements'] });
     },
