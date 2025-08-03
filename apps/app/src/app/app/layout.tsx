@@ -10,6 +10,7 @@ import {
 } from '@workout-tracker/ui/providers/theme-provider';
 import { redirect } from 'next/navigation';
 import { FC } from 'react';
+import { AchievementsNotificationProvider } from '@/src/components/providers/achievements-notification-provider';
 
 interface Props {
   children: React.ReactNode;
@@ -46,7 +47,9 @@ const AppLayout: FC<Props> = async ({ children }) => {
           <SidebarProvider>
             <AppSidebar />
             <main className="w-full px-4 py-6">{children}</main>
+            <AchievementsNotificationProvider/>
           </SidebarProvider>
+
           <div className="fixed bottom-4 right-4">
             <ModeToggle />
           </div>

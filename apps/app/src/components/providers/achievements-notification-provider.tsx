@@ -1,0 +1,44 @@
+'use client';
+import { useEffect, useState } from 'react';
+import {
+  useGetUnreadAchievements,
+  useMarkAchievementRead,
+} from '../../hooks/use-achievements';
+import { Skeleton } from '@workout-tracker/ui/components/skeleton';
+import { Button } from '@workout-tracker/ui/components/button';
+
+export function AchievementsNotificationProvider() {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const { mutateAsync: markAchievementRead } = useMarkAchievementRead();
+  const { data: unreadAchievementsObject, isLoading } =
+    useGetUnreadAchievements();
+  const unreadAchievements = unreadAchievementsObject?.unreadAchievements || [];
+
+  const handleMarkAchievementRead = async () => {
+    setModalOpen(false);
+    await markAchievementRead(unreadAchievements[0].id);
+  };
+
+  useEffect(() => {
+    if (unreadAchievements.length > 0) {
+      setModalOpen(true);
+    }
+  }, [unreadAchievements.length]);
+
+  if (isLoading) {
+    return <Skeleton className="h-6 w-48" />;
+  }
+
+  return (
+    <div>
+      {modalOpen ? (
+        <div>
+          You have some unread message ({unreadAchievements.length})
+          <Button variant={'outline'} onClick={handleMarkAchievementRead}>
+            X
+          </Button>
+        </div>
+      ) : null}
+    </div>
+  );
+}
