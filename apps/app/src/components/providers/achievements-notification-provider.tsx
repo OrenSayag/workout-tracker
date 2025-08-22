@@ -31,14 +31,27 @@ export function AchievementsNotificationProvider() {
 
   return (
     <div>
-      {modalOpen ? (
-        <div>
-          You have some unread message ({unreadAchievements.length})
-          <Button variant={'outline'} onClick={handleMarkAchievementRead}>
-            X
-          </Button>
-        </div>
+      {isOpen ? (
+        <NotifyNewAchievementsModal
+          achievementIds={['first_workout']} //TODO Change this from hardcoded achievement id to a generic id
+          onClose={() => handleMarkAchievementRead() }
+          isOpen={isOpen}
+        />
       ) : null}
     </div>
   );
+
+  /*  return (
+      <div>
+        {isOpen ? (
+          <div>
+            You have some unread message ({unreadAchievements.length})
+            <Button variant={'outline'} onClick={handleMarkAchievementRead}>
+              X
+            </Button>
+          </div>
+        ) : null}
+      </div>
+    );
+    */
 }
