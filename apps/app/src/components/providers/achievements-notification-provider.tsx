@@ -5,7 +5,7 @@ import {
   useMarkAchievementRead,
 } from '../../hooks/use-achievements';
 import { Skeleton } from '@workout-tracker/ui/components/skeleton';
-import { Button } from '@workout-tracker/ui/components/button';
+import { NotifyNewAchievementsModal } from '../organisms/notify-new-achievement-modal';
 
 export function AchievementsNotificationProvider() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
