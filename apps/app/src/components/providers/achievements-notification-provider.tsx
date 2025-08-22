@@ -8,7 +8,7 @@ import { Skeleton } from '@workout-tracker/ui/components/skeleton';
 import { NotifyNewAchievementsModal } from '../organisms/notify-new-achievement-modal';
 
 export function AchievementsNotificationProvider() {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [isOpen, setModalOpen] = useState<boolean>(false);
   const { mutateAsync: markAchievementRead } = useMarkAchievementRead();
   const { data: unreadAchievementsObject, isLoading } =
     useGetUnreadAchievements();
@@ -25,9 +25,6 @@ export function AchievementsNotificationProvider() {
     }
   }, [unreadAchievements.length]);
 
-  if (isLoading) {
-    return <Skeleton className="h-6 w-48" />;
-  }
 
   return (
     <div>

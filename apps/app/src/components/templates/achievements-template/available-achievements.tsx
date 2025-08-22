@@ -4,7 +4,7 @@ type ItemProps = {
   achievement: Achievement;
 };
 
-const Item = ({ achievement }: ItemProps) => {
+export const Item = ({ achievement }: ItemProps) => {
   return (
     <div className="flex items-start gap-4 bg-[#1c1c1e] rounded-xl shadow-lg p-5 w-[300px] min-h-[140px] text-white">
       <div className="text-4xl">{achievement.icon}</div>
